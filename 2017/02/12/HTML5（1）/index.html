@@ -1,0 +1,1208 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="html,learning," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="浏览器与服务器之间的交互过程
+用户在浏览器的地址栏中输入网站的地址
+
+浏览器将请求报文发送给地址栏中网站的服务器
+
+服务器根据请求报文返回页面数据给浏览器
+
+浏览器得到响应的数据以后将之呈现给用户
+
+
+请求报文和响应报文——审查元素 》network
+请求报文：浏览器发送给服务器的
+
+响应报文：服务器返回给浏览器的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html5">
+<meta property="og:url" content="http://yoursite.com/2017/02/12/HTML5（1）/index.html">
+<meta property="og:site_name" content="Clementine_justCoding">
+<meta property="og:description" content="浏览器与服务器之间的交互过程
+用户在浏览器的地址栏中输入网站的地址
+
+浏览器将请求报文发送给地址栏中网站的服务器
+
+服务器根据请求报文返回页面数据给浏览器
+
+浏览器得到响应的数据以后将之呈现给用户
+
+
+请求报文和响应报文——审查元素 》network
+请求报文：浏览器发送给服务器的
+
+响应报文：服务器返回给浏览器的">
+<meta property="og:updated_time" content="2017-02-12T02:27:30.750Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html5">
+<meta name="twitter:description" content="浏览器与服务器之间的交互过程
+用户在浏览器的地址栏中输入网站的地址
+
+浏览器将请求报文发送给地址栏中网站的服务器
+
+服务器根据请求报文返回页面数据给浏览器
+
+浏览器得到响应的数据以后将之呈现给用户
+
+
+请求报文和响应报文——审查元素 》network
+请求报文：浏览器发送给服务器的
+
+响应报文：服务器返回给浏览器的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'ROOT'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/12/HTML5（1）/"/>
+
+
+
+
+
+  <title> html5 | Clementine_justCoding </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Clementine_justCoding</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/About" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/12/HTML5（1）/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine_justCoding">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine_justCoding" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                html5
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-12T10:22:55+08:00">
+                2017-02-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/12/HTML5（1）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/12/HTML5（1）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="浏览器与服务器之间的交互过程"><a href="#浏览器与服务器之间的交互过程" class="headerlink" title="浏览器与服务器之间的交互过程"></a>浏览器与服务器之间的交互过程</h5><ol>
+<li><p>用户在浏览器的地址栏中输入网站的地址</p>
+</li>
+<li><p>浏览器将请求报文发送给地址栏中网站的服务器</p>
+</li>
+<li><p>服务器根据请求报文返回页面数据给浏览器</p>
+</li>
+<li><p>浏览器得到响应的数据以后将之呈现给用户</p>
+</li>
+</ol>
+<h5 id="请求报文和响应报文——审查元素-》network"><a href="#请求报文和响应报文——审查元素-》network" class="headerlink" title="请求报文和响应报文——审查元素 》network"></a>请求报文和响应报文——审查元素 》network</h5><ol>
+<li><p>请求报文：浏览器发送给服务器的</p>
+</li>
+<li><p>响应报文：服务器返回给浏览器的</p>
+</li>
+</ol>
+<a id="more"></a>
+<h5 id="浏览器与浏览器内核"><a href="#浏览器与浏览器内核" class="headerlink" title="浏览器与浏览器内核"></a>浏览器与浏览器内核</h5><ul>
+<li>浏览器是指可以显示网页服务器或者文件系统的HTML文件（标准通用标记语言的一个应用）内容，并让用户与这些文件交互的一种软件。</li>
+<li>浏览器内核（Rendering Engine）：负责对网页语法的解释（如标准通用标记语言下的一个应用HTML、JavaScript）并渲染（显示）网页。 所以，通常所谓的浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。</li>
+<li>IE：trident；  Safari：webkit；Firefox：gecko；chrome、Opera：blink</li>
+</ul>
+<h5 id="文件的后缀名"><a href="#文件的后缀名" class="headerlink" title="文件的后缀名"></a>文件的后缀名</h5><ul>
+<li>修改文件的后缀名是不会改变内容，只决定打开方式</li>
+<li>H系列标签作用：把页面上的文字加上标题的语义</li>
+</ul>
+<h5 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h5><ul>
+<li>http协议<ul>
+<li>请求报文</li>
+<li>响应报文</li>
+<li>URL：协议名、服务器的IP地址、端口号、请求文件的名称</li>
+</ul>
+</li>
+<li>浏览器接受用户操作——浏览器封装HTTP请求——链接服务器：DNS解析——发送请求Request——服务器接收请求——处理请求——返回响应报文——浏览器接收响应报文——渲染页面呈现</li>
+<li>如果没有设置端口号那么默认的端口是：80</li>
+</ul>
+<p>图片是另外请求</p>
+<p>继续渲染与请求服务器的图片</p>
+<h5 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签"></a>图片标签</h5><ul>
+<li>img：图片标签</li>
+<li>src：标签的属性，设置图片的路径</li>
+<li>Alt：如果图片不存在，设置图片的文本信息</li>
+<li>title：设置图片的提示信息，当鼠标悬停在图片上方的时候，就会显示提示信息</li>
+</ul>
+<h5 id="访问有图片的网页时，浏览器和服务器的交互过程"><a href="#访问有图片的网页时，浏览器和服务器的交互过程" class="headerlink" title="访问有图片的网页时，浏览器和服务器的交互过程"></a>访问有图片的网页时，浏览器和服务器的交互过程</h5><ul>
+<li>用户在地址栏中输入一个网页的网址，按回车</li>
+<li>浏览器就会向这个地址的服务器发送一个请求报文</li>
+<li>服务器根据请求报文返回网页的页面数据给浏览器</li>
+<li>浏览器解析返回的响应报文，并渲染显示</li>
+<li>当浏览器解析到图片的时候，它不知道图片是在哪里的，所以，浏览器会再发送一次请求报文，去请求服务器的那一张图片</li>
+<li>然后等待服务器返回图片的响应的时候，浏览器还会继续解析下面的其它内容</li>
+</ul>
+<h5 id="路径分为两种情况"><a href="#路径分为两种情况" class="headerlink" title="路径分为两种情况"></a>路径分为两种情况</h5><ul>
+<li>绝对路径：从盘符开始寻找路径</li>
+<li>相对路径：从当前页面开始寻找路径</li>
+</ul>
+<h5 id="a标签使用的地方"><a href="#a标签使用的地方" class="headerlink" title="a标签使用的地方"></a>a标签使用的地方</h5><ul>
+<li>空连接：<code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code></li>
+<li>去到其它的网页：<code>&lt;a href=&quot;其它的网页.html&quot;&gt;</code></li>
+<li>去到其它页面的某一个地方，在跳转的页面进行定位 <code>&lt;a href=&quot;其它的网页.html#id&quot;&gt;</code></li>
+<li>去到本页面的某一个地方：<code>&lt;a href=&quot;#id&quot;&gt;</code></li>
+<li>下载（不建议）</li>
+</ul>
+<h5 id="a标签的属性target"><a href="#a标签的属性target" class="headerlink" title="a标签的属性target"></a>a标签的属性target</h5><ul>
+<li><code>&lt;a href=&quot;1.html&quot; target=&quot;_blank&quot;&gt;将会用新的页面打开1.html&lt;/a&gt;</code></li>
+<li><code>&lt;a href=&quot;1.html&quot; target=&quot;_self&quot;&gt;将会在当前的页面打开1.html&lt;/a&gt;</code></li>
+<li>base 为页面上所有a标签设置跳转的方式（base标签一般放在title下面，写在head里面）<code>&lt;base target=&quot;_blank&quot;&gt;</code></li>
+</ul>
+<h5 id="DOCTYPE文档类型"><a href="#DOCTYPE文档类型" class="headerlink" title="DOCTYPE文档类型"></a>DOCTYPE文档类型</h5><ul>
+<li>DTD 文档类型定义</li>
+<li>html和XHTML规范<ul>
+<li>html：3种<ul>
+<li>strict</li>
+<li>transitional（用的最多）</li>
+<li>frameset</li>
+</ul>
+</li>
+<li>XHTML：3种</li>
+</ul>
+</li>
+<li>lang 用来设置当前页面的语言<ul>
+<li>设置页面上主要使用语言的类型</li>
+<li>将来做SEO的时候在权重上起到一定的作用</li>
+<li>用于特殊设备上的设置，eg，盲人设备</li>
+</ul>
+</li>
+</ul>
+<h5 id="关于SEO"><a href="#关于SEO" class="headerlink" title="关于SEO"></a>关于SEO</h5><ul>
+<li>搜索引擎优化（网站在搜索页面上的排名靠前）<ul>
+<li>买排名，不靠谱</li>
+<li>将页面做成静态页面（html）</li>
+<li>发外链</li>
+<li>页面的友好性（规范）：在合适的地方使用合适的标签，合理的使用标签的语义化</li>
+</ul>
+</li>
+<li>讨好搜索引擎<ul>
+<li>网络爬虫，搜索引擎机器人：收录Internet上的网站，找到访问量高的，语义化好的网站，最后将这些网站作为搜索的结果呈现给用户观看  任务：就是用来访问页面给页面排序，从而在用户搜索的时候可以有一个先后的排名</li>
+</ul>
+</li>
+<li><p>让网站更靠前的方式：</p>
+<ul>
+<li>买排名，不靠谱</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+<h5 id="title标签"><a href="#title标签" class="headerlink" title="title标签"></a>title标签</h5><ul>
+<li>作用：让页面拥有一个属于自己的标题</li>
+<li>title中的文本在SEO中占有很大的权重</li>
+<li>h1,h2</li>
+</ul>
+<h5 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h5><ul>
+<li>注意：meta中设置的所有的内容在页面都不会显示，</li>
+</ul>
+<ul>
+<li><p>description 可以描述页面，可以用来使用百度程序（网络爬虫）来收录关键信息，以此提高页面的排名</p>
+</li>
+<li><p>keywords  关键词，可以用来提高页面的关键词的比重的一种方式，:angry:英文的逗号</p>
+</li>
+<li><p>最多不要超过十个</p>
+</li>
+<li><p>charset</p>
+<ul>
+<li><p>字符集：相当于一个字库，在这个字库有很多的文字，每一个文字都有对应的编码</p>
+</li>
+<li><p>当你设置的网页的编码格式和保存的编码格式不一样的时候，就会发生乱码</p>
+</li>
+<li><p>gb2312：国际标准，收录了汉字，片假名</p>
+</li>
+<li><p>gbk：国标扩（扩展版），一个文字2个字节</p>
+</li>
+<li><p>UTF-8：收录全世界所有的语言中的文字，一个文字3个字节</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h5><ul>
+<li>无序列表<ul>
+<li>ul标签的作用：表示在这里有一个无序的列表</li>
+<li>li标签的作用：表示列表的项</li>
+<li>注意：ul不能单独出现，ul里面一定要放li，li是一个容器，放什么其他的标签都可以</li>
+</ul>
+</li>
+<li>有序列表<ul>
+<li>作用：显示一段有顺序的数据</li>
+<li>语义：一组有顺序的数据</li>
+</ul>
+</li>
+<li>自定义列表：dl,dt,dd<ul>
+<li>dl标签：写一个自定义列表</li>
+<li>dt标签：它代表的就是这儿有一个自定义的列表项</li>
+<li>dd标签：代表dt对应的列表项中的具体内容</li>
+</ul>
+</li>
+</ul>
+<h5 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h5><ul>
+<li><p>table标签：表示是一个表格的内容</p>
+</li>
+<li><p>tr标签：表示是表格中的一行</p>
+</li>
+<li><p>td标签：表示是表格中的一个单元格</p>
+</li>
+<li><p>表格的其它标签和属性：</p>
+<ul>
+<li>表格的属性：<table border="1" cellspacing="" cellpadding=""> <ul>
+<li>border：设置表格的边框的宽度 </li>
+<li>cellspacing：设置的是表格中的单元格之间的距离</li>
+<li>cellpadding：设置的是单元格中的内容与单元格之间的距离</li>
+<li>width</li>
+<li>height</li>
+</ul>
+</table></li>
+</ul>
+</li>
+<li><p>表格中的其他标签</p>
+<ul>
+<li>th标签：设置表头，具体表现的效果是文字加粗，居中</li>
+<li>caption标签：设置标题的标题，注意，caption标签应该放在table标签后面</li>
+<li>thead标签：设置的是表格的头部信息，一般th的内容都应该放在这里</li>
+<li>tbody标签：设置的是表格的主题内容，一般td的内容都放在这里</li>
+<li>tfoot标签：设置的是表格的尾部信息，一般是放一些总结性的信息</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+<h5 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h5><ul>
+<li><code>&lt;input type=&quot;hidden&quot; value=&quot;&quot;&gt;</code> 学习ajax时候用到</li>
+<li><input type="text" value="默认值">：输入框</li>
+<li><input type="password">：密码框</li>
+<li><input type="hidden" value="隐藏的数据">：隐藏域</li>
+<li><input type="radio">：输入框</li>
+<li>注意：如果单选按钮要真正做到单选的效果，需要进行分组。通过name属性，可以将多个单选按钮设置为一组</li>
+<li>默认选中 checked=”checked”</li>
+<li><input type="checkbox" checked="checked" name="hobby">：复选框</li>
+<li><input type="button" value="按钮上的文字">：设置一个普通按钮</li>
+<li><input type="image" value="图像的路径">：设置一个图像按钮（图像域），按钮的图片需要通过src来进行设置</li>
+<li><input type="submit">：提交按钮</li>
+<li><input type="reset">：重置按钮</li>
+<li>注意：不管是提交还是重置，都要先有一个表单<form></form></li>
+<li>下拉框</li>
+<li>文本域</li>
+</ul>
+<p>注意：1. reset如果不设置value值，会有默认值<br>        2.reset、submit等需要和form标签配合使用，否则不会有效果</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"># html</a>
+          
+            <a href="/tags/learning/" rel="tag"># learning</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/12/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/12/HTML5（1）/"
+           data-title="html5" data-url="http://yoursite.com/2017/02/12/HTML5（1）/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ol5g8fjtw.bkt.clouddn.com/about.jpg"
+               alt="Clementine" />
+          <p class="site-author-name" itemprop="name">Clementine</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Mango-mao" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/p/1005051069913250" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:qinlingmango@aliyun.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#浏览器与服务器之间的交互过程"><span class="nav-number">1.</span> <span class="nav-text">浏览器与服务器之间的交互过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#请求报文和响应报文——审查元素-》network"><span class="nav-number">2.</span> <span class="nav-text">请求报文和响应报文——审查元素 》network</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浏览器与浏览器内核"><span class="nav-number">3.</span> <span class="nav-text">浏览器与浏览器内核</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文件的后缀名"><span class="nav-number">4.</span> <span class="nav-text">文件的后缀名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTTP协议"><span class="nav-number">5.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#图片标签"><span class="nav-number">6.</span> <span class="nav-text">图片标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#访问有图片的网页时，浏览器和服务器的交互过程"><span class="nav-number">7.</span> <span class="nav-text">访问有图片的网页时，浏览器和服务器的交互过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#路径分为两种情况"><span class="nav-number">8.</span> <span class="nav-text">路径分为两种情况</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#a标签使用的地方"><span class="nav-number">9.</span> <span class="nav-text">a标签使用的地方</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#a标签的属性target"><span class="nav-number">10.</span> <span class="nav-text">a标签的属性target</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DOCTYPE文档类型"><span class="nav-number">11.</span> <span class="nav-text">DOCTYPE文档类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于SEO"><span class="nav-number">12.</span> <span class="nav-text">关于SEO</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#title标签"><span class="nav-number">13.</span> <span class="nav-text">title标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#meta标签"><span class="nav-number">14.</span> <span class="nav-text">meta标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#列表"><span class="nav-number">15.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#表格"><span class="nav-number">16.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#表单元素"><span class="nav-number">17.</span> <span class="nav-text">表单元素</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Clementine
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"justcoding.duoshuo.com"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
