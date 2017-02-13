@@ -3,6 +3,81 @@
 
     
   <url>
+    <loc>https://mango-mao.github.io/mangomao/2014/12/14/HTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%882%EF%BC%89/</loc>
+    <lastmod>2017-02-13T14:48:07.588Z</lastmod>
+    <data>
+        <display>
+        <title>'1'</title>
+        <pubTime>2014-12-14T12:46:12.000Z</pubTime>
+        
+        <tag>Web </tag>
+         
+        <tag>HTML </tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+             
+              <breadCrumb title="HTML" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mango-mao.github.io/mangomao/2014/12/13/HMTL%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%881%EF%BC%89/</loc>
+    <lastmod>2017-02-13T14:45:10.123Z</lastmod>
+    <data>
+        <display>
+        <title>HTML&CSS基础知识（1）</title>
+        <pubTime>2014-12-13T14:43:29.000Z</pubTime>
+        
+        <tag>Web </tag>
+         
+        <tag>HTML </tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+             
+              <breadCrumb title="HTML" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://mango-mao.github.io/mangomao/2016/02/12/jQuery/</loc>
+    <lastmod>2017-02-13T14:42:34.828Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery</title>
+        <pubTime>2016-02-12T07:16:13.000Z</pubTime>
+        
+        <tag>Web </tag>
+         
+        <tag>jQuery </tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+             
+              <breadCrumb title="jQuery" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/jQuery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://mango-mao.github.io/mangomao/2015/02/12/HTML5%EF%BC%882%EF%BC%89/</loc>
     <lastmod>2017-02-12T07:21:58.824Z</lastmod>
     <data>
@@ -21,31 +96,6 @@
           
              
               <breadCrumb title="HTML5" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/HTML5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://mango-mao.github.io/mangomao/2017/02/12/jQuery/</loc>
-    <lastmod>2017-02-12T07:20:13.774Z</lastmod>
-    <data>
-        <display>
-        <title>jQuery</title>
-        <pubTime>2017-02-12T07:16:13.000Z</pubTime>
-        
-        <tag>Web </tag>
-         
-        <tag>jQuery </tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="jQuery" url="https://mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/jQuery/"/>
           
         </display>
     </data>
