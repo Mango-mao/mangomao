@@ -421,14 +421,13 @@
     </entry>
     
     <entry>
-      <title><![CDATA['1']]></title>
+      <title><![CDATA[HTML&CSS基础知识（2）]]></title>
       <url>https://mango-mao.github.io/mangomao/2014/12/14/HTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%882%EF%BC%89/</url>
       <content type="html"><![CDATA[<h4 id="html中的空格合并"><a href="#html中的空格合并" class="headerlink" title="html中的空格合并"></a>html中的空格合并</h4><ul>
 <li>空格合并：在html源代码里面写的空格，换行，tab，浏览器解析的时候不敏感，再多的连续的空格，换行，tab浏览器只会解析成一个空格。</li>
 </ul>
 <ul>
-<li><p>如果想要多个空格，使用特殊字符——字符实体</p>
-<ul>
+<li>如果想要多个空格，使用特殊字符——字符实体<ul>
 <li><code> </code>一个中文字符的位置</li>
 <li><code>&lt;</code> &lt;</li>
 <li><code>&gt;</code> &gt;</li>
@@ -436,9 +435,9 @@
 <li><code>©</code> 版权</li>
 <li><code>®</code> 商标</li>
 </ul>
-<p>​</p>
 </li>
 </ul>
+<p><a id="more"></a>  ​</p>
 <h4 id="span标签"><a href="#span标签" class="headerlink" title="span标签"></a>span标签</h4><ul>
 <li>一行可以放多个标签，span标签的大小由内容决定</li>
 </ul>

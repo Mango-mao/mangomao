@@ -861,7 +861,7 @@
               
                 
                 <a class="post-title-link" href="/mangomao/2014/12/14/HTML基础知识（2）/" itemprop="url">
-                  '1'
+                  HTML&CSS基础知识（2）
                 </a>
               
             
@@ -959,13 +959,11 @@
 
       
         
-          
-            <h4 id="html中的空格合并"><a href="#html中的空格合并" class="headerlink" title="html中的空格合并"></a>html中的空格合并</h4><ul>
+          <h4 id="html中的空格合并"><a href="#html中的空格合并" class="headerlink" title="html中的空格合并"></a>html中的空格合并</h4><ul>
 <li>空格合并：在html源代码里面写的空格，换行，tab，浏览器解析的时候不敏感，再多的连续的空格，换行，tab浏览器只会解析成一个空格。</li>
 </ul>
 <ul>
-<li><p>如果想要多个空格，使用特殊字符——字符实体</p>
-<ul>
+<li>如果想要多个空格，使用特殊字符——字符实体<ul>
 <li><code> </code>一个中文字符的位置</li>
 <li><code>&lt;</code> &lt;</li>
 <li><code>&gt;</code> &gt;</li>
@@ -973,263 +971,16 @@
 <li><code>©</code> 版权</li>
 <li><code>®</code> 商标</li>
 </ul>
-<p>​</p>
 </li>
 </ul>
-<h4 id="span标签"><a href="#span标签" class="headerlink" title="span标签"></a>span标签</h4><ul>
-<li>一行可以放多个标签，span标签的大小由内容决定</li>
-</ul>
-<h4 id="div标签"><a href="#div标签" class="headerlink" title="div标签"></a>div标签</h4><ul>
-<li>一个div标签会占一行的位置，高度是由内容决定的，宽度就是一整行</li>
-</ul>
-<h4 id="三层分离"><a href="#三层分离" class="headerlink" title="三层分离"></a>三层分离</h4><ul>
-<li>html结构层</li>
-<li>css样式层</li>
-<li>javascript行为层</li>
-</ul>
-<h4 id="html语义化的好处"><a href="#html语义化的好处" class="headerlink" title="html语义化的好处"></a>html语义化的好处</h4><ul>
-<li>SEO优化</li>
-<li>让我们自己编写代码的时候会更加的清晰</li>
-</ul>
-<h4 id="CSS的初体验"><a href="#CSS的初体验" class="headerlink" title="CSS的初体验"></a>CSS的初体验</h4><ul>
-<li>css代码写在style标签里，style标签放在head标签里面，title标签后面</li>
-</ul>
-<h4 id="字体相关的属性"><a href="#字体相关的属性" class="headerlink" title="字体相关的属性"></a>字体相关的属性</h4><ul>
-<li>浏览器默认宋体</li>
-<li>font-size：设置字体的大小</li>
-<li>font-weight：设置字体的粗细。设置数值（100-900，只可以用整数，以每个字体类型为标准）或者关键词</li>
-<li>font-family：设置字体</li>
-<li>font-style：设置斜体</li>
-</ul>
-<h4 id="font"><a href="#font" class="headerlink" title="font"></a>font</h4><ul>
-<li>font连写：font-style font-weight font-size font-family</li>
-<li>一次性font属性可以设置多个css效果。像这种一次可以设置多个效果的属性叫做复合属性</li>
-</ul>
-<h4 id="颜色表示方式"><a href="#颜色表示方式" class="headerlink" title="颜色表示方式"></a>颜色表示方式</h4><ul>
-<li><p>使用颜色的单词来设置颜色</p>
-</li>
-<li><p>十六进制</p>
-</li>
-<li><p>RGB<br>​</p>
-</li>
-</ul>
-<h4 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h4><ul>
-<li>选择器的作用：选择html的内容，为其设置css</li>
-</ul>
-<ul>
-<li><p>标签选择器：直接在选择器的部分写上标签名，此时，当前页面的该标签都会被选中来设置css</p>
-</li>
-<li><p>类选择器的使用方式</p>
-<ul>
-<li>给标签设置class=类名</li>
-<li>设置类选择器样式</li>
-</ul>
-</li>
-<li><p>id选择器的使用方式</p>
-<ul>
-<li>给标签设置id=id名</li>
-<li>设置id选择器的样式</li>
-</ul>
-<p>注意：元素的id是唯一的</p>
-<p>id不是给css用的，而是JavaScript</p>
-</li>
-<li><p>命名规范</p>
-<ul>
-<li>取名的时候可以使用的字符：0-9，a-z，A-Z，_，-</li>
-<li>取名的时候不能用数字开头</li>
-<li>潜规则：这个类选择器是干什么用的就取什么名字</li>
-</ul>
-</li>
-<li><p>通配符选择器的使用方式</p>
-<ul>
-<li>*</li>
-<li>作用：选择页面中所有的标签去设置一些统一的样式</li>
-<li>效率比较低，不建议使用</li>
-</ul>
-</li>
-<li><p>并集选择器 </p>
-<ul>
-<li>同时选择多个内容设置同一个样式</li>
-<li>如果需要设置一些统一的样式，用并集选择器</li>
-</ul>
-</li>
-<li><p>交集选择器</p>
-</li>
-<li><p>后代选择器：选中某些元素下面的符合条件的其它元素，不管是直接子元素还是非直接子元素，都会选中</p>
-<ul>
-<li>div p 选择了div标签下面的p标签</li>
-</ul>
-</li>
-<li><p>子代选择器：选中某些元素下面的符合条件的其它元素，但必须是直接子元素  &gt;</p>
-</li>
-</ul>
-<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><ul>
-<li>注释不可以嵌套</li>
-</ul>
-<h4 id="添加CSS的三种方式"><a href="#添加CSS的三种方式" class="headerlink" title="添加CSS的三种方式"></a>添加CSS的三种方式</h4><ul>
-<li><p>嵌套样式</p>
-</li>
-<li><p>行内样式：把css写在style属性里</p>
-<ul>
-<li>多个样式之间用分号隔开</li>
-</ul>
-</li>
-<li><p>外联样式：把css写在另外一个文件里</p>
-<p>注意：中文的空格占两个字母的空间（全角）</p>
-</li>
-</ul>
-<h4 id="三种样式的使用场景"><a href="#三种样式的使用场景" class="headerlink" title="三种样式的使用场景"></a>三种样式的使用场景</h4><ul>
-<li>行内：单独给一个标签设置样式的时候，不经常使用</li>
-<li>嵌套：设置的样式只给当前的网页使用，假如你编写的样式只有当前页面会使用到，那么请使用嵌套样式</li>
-<li>外联：设置的样式可以给多个网页使用，假如你写的样式在多个页面都会被使用到，就使用外联样式</li>
-</ul>
-<h4 id="text相关三个属性"><a href="#text相关三个属性" class="headerlink" title="text相关三个属性"></a>text相关三个属性</h4><ul>
-<li>text-indent：文本的首行缩进<ul>
-<li>em：单位，1个em相当于一个文字的大小</li>
-</ul>
-</li>
-<li>text-align：文本的对齐方式（right，center，left）</li>
-<li>text-decoration： 设置文本的装饰线</li>
-<li>margin：0 auto <ul>
-<li>作用：使容器在页面里居中显示</li>
-</ul>
-</li>
-</ul>
-<h4 id="css三大特性"><a href="#css三大特性" class="headerlink" title="css三大特性"></a>css三大特性</h4><ul>
-<li><p>继承性    </p>
-<ul>
-<li><p>父元素的css属性可以被子元素继承使用</p>
-</li>
-<li><p>注意：可以继承的css属性：text-，font-，line-开头的属性都可以继承，color</p>
-</li>
-<li><p>使用场景：通过body给整个网页设置一个通用的font-</p>
-</li>
-<li><p>特殊性</p>
-<ul>
-<li><p>如果是一个a标签，它是不能从父元素继承字体的颜色，因为a标签有自己的默认颜色蓝色，如果要改变a标签的字体颜色，请选择这个a标签，再改color</p>
-</li>
-<li><p>如果是一个标题标签，它是不能从父元素继承字体的大小的，因为标题标签有自己默认的字体大小，要改变字体大小，请直接选中标题标签设置font-size</p>
-<p>​:flower:​ 总结：标签如果有默认的样式的时候，继承过来的css属性就不能起作用</p>
-</li>
-<li><p>div如果没有设置高度的时候，而且也没有内容，那么它的高度为0，宽度默认继承父元素的宽度</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>层叠性</p>
-<ul>
-<li>设置相同的css属性的时候，根据远近亲疏让最“亲”的css属性起作用，其它的被覆盖</li>
-</ul>
-</li>
-<li><p>优先级</p>
-<ul>
-<li>！important》行内样式》id选择器》类选择器》标签选择器》通配符选择器》继承</li>
-<li>虽然！important是一个变数，但是无法继承</li>
-</ul>
-</li>
-<li><p>权重</p>
-<ul>
-<li>当组合选择器进行使用的时候，我们有一个计算优先级的公式（权重的计算）</li>
-<li>（！important的数量，id选择器的数量，类选择器的数量，标签选择器的数量）</li>
-<li>浏览器对父元素不敏感</li>
-</ul>
-<p>​</p>
-</li>
-</ul>
-<h4 id="背景相关的几个属性"><a href="#背景相关的几个属性" class="headerlink" title="背景相关的几个属性"></a>背景相关的几个属性</h4><ul>
-<li>背景颜色：background-color</li>
-<li>背景图片：background-image</li>
-<li>背景是否重复：background-repeat。值有no-repeat/repeat-x/repeat-y/repeat（默认）</li>
-<li>背景图片的位置：background-position：center center；水平方向的值：right center  left；垂直方向的值：top center bottom</li>
-<li>背景的复合属性：background</li>
-</ul>
-<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><ul>
-<li>*{margin：0；padding：0；}</li>
-<li>出现图片错位的原因：father的宽度继承自body，会跟着浏览器的窗口变化，son的宽度设定为1000px，当窗口拉动导致father的宽度小于1000的时候，father父元素无法完整显示son了，于是出现了错位的请问</li>
-<li>解决方案：给father设置一个最小的宽度：min-width：1000px</li>
-<li>背景设置一般图片多大元素宽高就设置多大</li>
-</ul>
-<h4 id="元素的显示方式"><a href="#元素的显示方式" class="headerlink" title="元素的显示方式"></a>元素的显示方式</h4><ul>
-<li>行内元素<ul>
-<li>一行里面可以显示多个</li>
-<li>无法设置宽高</li>
-<li>大小由内容决定</li>
-</ul>
-</li>
-<li>块级元素<ul>
-<li>独占一行</li>
-<li>可以设置宽高</li>
-<li>默认宽度一整行</li>
-</ul>
-</li>
-<li>行内块级元素<ul>
-<li>可以设置宽高</li>
-<li>一行里面可以显示多个</li>
-</ul>
-</li>
-<li>设置垂直居中：line-height：容器的高度</li>
-</ul>
-<h4 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h4><ul>
-<li>a：link——给a标签设置没有被访问过的样式</li>
-<li>a：visited——给a标签设置访问过的样式</li>
-<li>a：hover——给a标签设置鼠标悬停时的样式</li>
-<li>a：active——设置a标签被激活时的样式（被点击时的样式）</li>
-<li>要按照一定的顺序编写，否则样式有可能会无法显示</li>
-<li>有些锚伪类除了可以作用于a标签上还可以作用在其它标签上<ul>
-<li>：link——只能用于a标签</li>
-<li>：visited——只能用于a标签</li>
-<li>：hover——其它标签也可以使用这个伪类</li>
-<li>：active——其它标签也可以使用这个伪类</li>
-</ul>
-</li>
-</ul>
-<h4 id="行高（line-height"><a href="#行高（line-height" class="headerlink" title="行高（line-height)"></a>行高（line-height)</h4><ul>
-<li>应用：如果行高等于容器的高度，那么元素在父元素中垂直居中</li>
-<li>行高的定义：两行文本之间基线的距离就叫做行高</li>
-</ul>
-<h4 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h4><ul>
-<li>在写一个html页面的时候，其实就相当于在HTML页面叠盒子</li>
-<li>万物皆盒子</li>
-<li>border<ul>
-<li>border-color： 边框的颜色</li>
-<li>border-width：边框的宽度</li>
-<li>border-style：边框的样式</li>
-<li>border-top：设置上边框的粗细样式颜色</li>
-<li>border-right：</li>
-<li>border-bottom:</li>
-<li>border-left:</li>
-</ul>
-</li>
-<li>所有跟外观相关的设置，请不要再使用html来设置了，请使用css来设置，这就是三层分离</li>
-<li>border-collapse：设置表格的一个css属性，作用：去除表格中的单元格的间隙</li>
-<li>padding：设置内边距的css属性。所谓内容距就是内容与边框之间的距离<ul>
-<li>padding：40px——设置内容与边框中间的距离是40px，上右下左四个方向都是40px的距离</li>
-<li>padding：40px 80px——设置上内边距，下内边距为40px，左内边距，右内边距是80px</li>
-<li>padding：40px 60px 80px——设置上内边距40px，左右内边距的距离是60px，下内边距是80px</li>
-<li>padding：40px 60px 80px 100px——以顺时针方向进行设置</li>
-</ul>
-</li>
-<li>​:kiss: padding会改变盒子的大小（跟日常生活中有区别）</li>
-<li>计算盒子大小的公式：<ul>
-<li>盒子宽：border-left-width+padding-left+width+padding-right+border-right-width</li>
-<li>盒子高：border-top-width+padding-top+height+padding-bottom+border-bottom-width</li>
-</ul>
-</li>
-<li>特殊情况下padding不会改变盒子的大小<ul>
-<li>当一个大盒子包含一个小盒子，并且大小盒子都是块级元素，而且小盒子的宽度是继承自大盒子的话，那么设置小盒子的padding-left，padding-right不会改变小盒子的大小</li>
-</ul>
-</li>
-<li>margin：设置盒子与盒子之间的距离，外边距</li>
-</ul>
-<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><ul>
-<li>body默认带有margin： 8px的属性</li>
-<li>p标签带有margin：font-size 0；</li>
-<li>h标签默认带有margin-top和margin-bottom</li>
-<li>ul标签带有上下的margin以及padding-left</li>
-</ul>
-
-          
+<p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/mangomao/2014/12/14/HTML基础知识（2）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1768,13 +1519,6 @@
 
 <div class="powered-by">
   由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
 </div>
 
 
