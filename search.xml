@@ -421,7 +421,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[HTML&CSS基础知识（2）]]></title>
+      <title><![CDATA[HTML基础知识（2）]]></title>
       <url>https://mango-mao.github.io/mangomao/2014/12/14/HTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%882%EF%BC%89/</url>
       <content type="html"><![CDATA[<h4 id="html中的空格合并"><a href="#html中的空格合并" class="headerlink" title="html中的空格合并"></a>html中的空格合并</h4><ul>
 <li>空格合并：在html源代码里面写的空格，换行，tab，浏览器解析的时候不敏感，再多的连续的空格，换行，tab浏览器只会解析成一个空格。</li>
@@ -706,6 +706,7 @@
 <li><p>浏览器得到响应的数据以后将之呈现给用户</p>
 </li>
 </ol>
+<p><a id="more"></a>  ​</p>
 <h5 id="请求报文和响应报文——审查元素-》network"><a href="#请求报文和响应报文——审查元素-》network" class="headerlink" title="请求报文和响应报文——审查元素 》network"></a>请求报文和响应报文——审查元素 》network</h5><ol>
 <li><p>请求报文：浏览器发送给服务器的</p>
 </li>
