@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[jQuery]]></title>
+      <url>https://github.com/Mango-mao/Mango-mao.github.io/2017/02/12/jQuery/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>今天看到这样一句jquery源码<br><code>(function (window, undefined){})(window)</code></p>
+</blockquote>
+<ul>
+<li>第一眼：这是啥？</li>
+<li>第二眼：这是干啥？</li>
+<li>第三眼：为啥？</li>
+<li><p>然后……</p>
+<a id="more"></a>
+</li>
+<li><p>终于在各种资料查询</p>
+</li>
+<li><p>勇敢抱大腿后</p>
+</li>
+<li><p>拨开云雾见青天</p>
+</li>
+<li><p>必须得了个瑟~</p>
+</li>
+<li><p>ECMAScript执行JS代码是从里到外</p>
+</li>
+<li>因此把全局变量<em>window</em>对象传进来</li>
+<li>就避免了到外层去寻找</li>
+<li>减少作用域链的查询时间，提高效率</li>
+<li>当然</li>
+<li><p>如果你的插件用不到<em>window</em>对象，那么就不用传递这个参数啦</p>
+</li>
+<li><p>而且<br><code>(function(window, undefined))里的window和undefined</code></p>
+</li>
+<li>均可以替换成其他简写字符（比如L）</li>
+<li>那么在压缩的时候可以减少字节数</li>
+<li><p>即可以减少文件大小</p>
+</li>
+<li><p>再说回<em>undefined</em></p>
+</li>
+<li>在旧的浏览器中<em>undefined</em>可以被重新赋值</li>
+<li>在被重新赋值后,使用<em>undefined</em>指令将不能正确的检测一个变量是否被赋值</li>
+<li>总之，会影响到内部的<em>undefined</em></li>
+<li>jQuery框架考虑到这个问题</li>
+<li><p>因此增加一个形参<em>undefined</em></p>
+</li>
+<li><p>使用时最好就是不传实际参数</p>
+</li>
+<li>此时形参的<em>undefined</em>就是真正的<em>undefined</em>了</li>
+<li>记住，这里不是在说绕口令哦~</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[HTML5（2）]]></title>
+      <url>https://github.com/Mango-mao/Mango-mao.github.io/2015/02/12/HTML5%EF%BC%882%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h4 id="基础API提升"><a href="#基础API提升" class="headerlink" title="基础API提升"></a>基础API提升</h4><ul>
+<li>document.getElement……appendChild……都属于基础API</li>
+<li>alt +右键往下滑</li>
+<li><p>新选择器</p>
+<ul>
+<li><code>document.querySelector(selector)</code>——返回第一个满足选择器条件的元素，返回一个dom对象<ul>
+<li>代码段 qs=querySelector</li>
+<li>ae=addEventListenter</li>
+</ul>
+</li>
+<li><code>docuemnt.querySelectorAll(&quot;.item&quot;)</code>——返回所有满足该条件的元素，返回元素类型为dom对象的数组</li>
+<li>$（”.item”）——返回一个jQuery对象（dom元素的数组）</li>
+<li>本质上jQuery的方式和querySelector的方式都是获取DOM数组，只不过jQuery会多一些其它成员</li>
+<li>DOM数组的每一个成员注册事件不能像jQuery一样直接注册，必须分别给每个元素添加</li>
+<li>h5就是将我们经常需要的操作又包装一层，原生API</li>
+</ul>
+<a id="more"></a>
+</li>
+<li><p>Element.classList</p>
+<ul>
+<li>新H5中DOM对象多了一个classList属性，是一个数组</li>
+<li>a标签有个默认跳转</li>
+<li>this.classList.add()——添加一个新的类名</li>
+<li>this.classList.remove()——删除一个类名</li>
+<li>this.classList.contains()——判断是否包含一个指定的类名</li>
+<li><p>this.classList.toggle()——切换一个class</p>
+<ul>
+<li>toggle函数的第二个参数true为添加，false删除</li>
+</ul>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//判断当前classList中有没有active</span></div><div class="line"><span class="keyword">var</span> link=<span class="built_in">document</span>.querySelector(<span class="string">".bar"</span>);</div><div class="line">link.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">  <span class="comment">//toggle函数的第二个参数是true为添加，false为删除</span></div><div class="line">  <span class="keyword">var</span> exist =<span class="keyword">this</span>.classList.contains(<span class="string">"active"</span>);</div><div class="line">  <span class="keyword">this</span>.classList.toggle(<span class="string">"active"</span>,!exist);</div><div class="line">  e.preventDefault();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>访问历史API</p>
+<ul>
+<li><p>界面上的所有JS操作不会被浏览器记住，就无法回到之前的状态</p>
+</li>
+<li><p>go函数可以传入一个地址，不传默认刷新</p>
+</li>
+<li><p>window.history.forward()</p>
+</li>
+<li><p>auto file name(插件plugin名字)</p>
+</li>
+<li><p>不建议用*号把默认样式去掉，效率低</p>
+</li>
+<li><p>默认样式有必要，只不过为了统一设置</p>
+</li>
+<li><p>当我们在伪造的访问历史中前进或后退时会执行一个popstate事件。</p>
+</li>
+<li><p>通过JS可以加入一个访问状态</p>
+</li>
+<li><p>history.pushState(放入历史中的状态数据，设置title（现在浏览器不支持）)</p>
+</li>
+<li><p>window.location可以拿到当前网页中跟地址相关的信息（location是个对象）  hash是锚点值</p>
+</li>
+<li><p>decodeURI作用就是从URL编码转换到之前的状态</p>
+</li>
+<li><p>encode反作用</p>
+</li>
+<li><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">onclick</span>=<span class="string">"add()"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"添加一个历史记录"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="comment">//判断浏览器是否支持这个API</span></div><div class="line">      <span class="keyword">if</span>(<span class="built_in">window</span>.history &amp;&amp; history.pushState)&#123;</div><div class="line">        history.pushState(<span class="string">"数据"</span>,<span class="string">"设置历史状态显示的标题，但是浏览器不支持"</span>，<span class="string">"？demo="</span>+<span class="keyword">new</span> <span class="built_in">Date</span>().toLocalTimeString());</div><div class="line">      &#125;</div><div class="line">	&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>new Date()  获取的是一个时间对象</p>
+</li>
+<li><p>toLocalTimeString 转换成我们能认识的时间字符串</p>
+</li>
+<li><p>toDateTimeString 转换成我们能认识的日期字符串</p>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> title=<span class="built_in">window</span>.location.search.split(<span class="string">"="</span>)[<span class="number">1</span>];</div><div class="line"><span class="keyword">if</span>(title)&#123;</div><div class="line">  <span class="comment">//有值</span></div><div class="line"> <span class="comment">//如果地址栏中的地址有中文，会以URL编码方式呈现</span></div><div class="line">  content.innerHTML=data[<span class="built_in">decodeURI</span>(data)];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>class</p>
+<ul>
+<li><p>之前</p>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> h1=<span class="built_in">document</span>.getElementsByTagName(<span class="string">"h1"</span>)[<span class="number">0</span>];</div><div class="line"><span class="keyword">var</span> list =h1.className.split(<span class="string">" "</span>);</div><div class="line">list.push(<span class="string">"class4"</span>);</div><div class="line">h1.className=list.join(<span class="string">" "</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过dom对象的classList，className是字符串的形式，classList是数组的形式</p>
+<ul>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> h1=<span class="built_in">document</span>.getElementsByTagName(<span class="string">"h1"</span>)[<span class="number">0</span>];</div><div class="line"><span class="keyword">var</span> list=h1.classList</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过classList封装了一些针对增加、删除、切换的方法——add(“newclass”)； remove(“oldclass”)； toggle(“cl”)  存在则删除，不存在添加；contains()是否包含</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>控制台clear（）</p>
+<h4 id="全屏API"><a href="#全屏API" class="headerlink" title="全屏API"></a>全屏API</h4><ul>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> elem = 需要全屏的元素；</div><div class="line"><span class="keyword">if</span>(&#123;elem.webkitRequestFullScreen)&#123;</div><div class="line">  elem.webkitRequestFullScreen();</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(elem.mozRequestFullScreen)&#123;</div><div class="line">  elem.webkitRequestFullScreen();</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(elem.requestFullScreen)&#123;</div><div class="line">  elem.requestFullScreen();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>需要操作用户的界面的时候，都需要得到用户的允许</p>
+</li>
+<li><p>if()return  不写{}，只能在单句代码的时候才可以这样操作</p>
+</li>
+<li><p>在全屏后，背景颜色会不起作用，得单独设置</p>
+</li>
+<li><p>给元素全屏或者document.body全屏</p>
+</li>
+</ul>
+<h4 id="网页存储"><a href="#网页存储" class="headerlink" title="网页存储"></a>网页存储</h4><ul>
+<li><p>application cache——可以让网页离线访问</p>
+</li>
+<li><p>google开发工具有个功能可以断开网络——network》》no throttling 》可以模拟网络</p>
+</li>
+<li><p>tab键不起作用时，可以用Ctrl+E</p>
+</li>
+<li><p>：：before是元素一开始的时候，在元素内部</p>
+</li>
+<li><p><code>&lt;html lang=&quot;en&quot; manifest=&quot;cache.mainfest&quot;&gt;</code>——manifest属性对应指向一个文件，这个文件称之为H5的缓存清单。这个路径是相对路径</p>
+<ul>
+<li><p>应用程序缓存 正常开发</p>
+</li>
+<li><p>给html添加一个manifest属性指向一个文件</p>
+</li>
+<li><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">CACHA MANIFEST</div><div class="line"><span class="meta"># version 1.0.0</span></div><div class="line"><span class="symbol"></span></div><div class="line">CACHA:<span class="comment">//代表缓存下可以访问的文件，哪些文件可以缓存下来</span></div><div class="line">	index.html<span class="comment">//这里需要缩进</span></div><div class="line">	script.js</div><div class="line">	style.css</div><div class="line"><span class="symbol"></span></div><div class="line">NETWORK:<span class="comment">//哪些文件在有网络的情况下可以访问</span></div><div class="line">	*</div></pre></td></tr></table></figure>
+</li>
+<li><p>markdown编辑器，可以离线访问，得之前访问过，有过缓存才可以</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Web-Storage"><a href="#Web-Storage" class="headerlink" title="Web Storage"></a>Web Storage</h4><ul>
+<li><p>localStorage(生命周期是永久的) &amp; sessionStorage（浏览器结束的时候就没有了，用法是一样的）</p>
+</li>
+<li><p>getItem方式获取一个不存在的键，返回空字符串，而[]返回undefined</p>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btnSet = <span class="built_in">document</span>.querySelector(<span class="string">"#btn_set"</span>);</div><div class="line"><span class="keyword">var</span> btnGet = <span class="built_in">document</span>.querySelector(<span class="string">"#btn_get"</span>);</div><div class="line"><span class="keyword">var</span> txtValue = <span class="built_in">document</span>.querySelector(<span class="string">"#txt_value"</span>);</div><div class="line">btnGet.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">//txtValue.value=localStorage.getItem("key1");</span></div><div class="line">  <span class="keyword">if</span>(<span class="built_in">window</span>.localStorage)</div><div class="line">  txtValue.value=localStorage(<span class="string">"key1"</span>);</div><div class="line">&#125;);</div><div class="line">btnSet.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">//localStorage.setItem("key1",txtValue.value);</span></div><div class="line">  localStorage[<span class="string">"key1"</span>]=txtValue.value;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>id以下划线，class以中划线</p>
+</li>
+</ul>
+<h4 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h4><ul>
+<li>提供客户端本地操作文件的可能</li>
+<li>file API</li>
+<li>文件域 <input type="file" id="" multiple></li>
+<li>对于表单里的input来说：可以直接通过表单的name属性找到它</li>
+<li>document.form[0].input_file</li>
+<li>multiple是让文件域可以多选</li>
+<li>可以通过在控制台输入document.form[0].input_file.files 可以查看已经上传的文件，以数组的形式呈现</li>
+<li>lastModified——表示最近修改时间</li>
+<li>lastModifiedDate——date对象</li>
+<li>​:happy: v3.bootcss.com</li>
+<li>js里面常用单引号</li>
+</ul>
+<h4 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h4><ul>
+<li>支持网页内的拖放</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[HTML5（1）]]></title>
+      <url>https://github.com/Mango-mao/Mango-mao.github.io/2015/01/12/HTML5%EF%BC%881%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h5 id="浏览器与服务器之间的交互过程"><a href="#浏览器与服务器之间的交互过程" class="headerlink" title="浏览器与服务器之间的交互过程"></a>浏览器与服务器之间的交互过程</h5><ol>
+<li><p>用户在浏览器的地址栏中输入网站的地址</p>
+</li>
+<li><p>浏览器将请求报文发送给地址栏中网站的服务器</p>
+</li>
+<li><p>服务器根据请求报文返回页面数据给浏览器</p>
+</li>
+<li><p>浏览器得到响应的数据以后将之呈现给用户</p>
+</li>
+</ol>
+<h5 id="请求报文和响应报文——审查元素-》network"><a href="#请求报文和响应报文——审查元素-》network" class="headerlink" title="请求报文和响应报文——审查元素 》network"></a>请求报文和响应报文——审查元素 》network</h5><ol>
+<li><p>请求报文：浏览器发送给服务器的</p>
+</li>
+<li><p>响应报文：服务器返回给浏览器的</p>
+</li>
+</ol>
+<a id="more"></a>
+<h5 id="浏览器与浏览器内核"><a href="#浏览器与浏览器内核" class="headerlink" title="浏览器与浏览器内核"></a>浏览器与浏览器内核</h5><ul>
+<li>浏览器是指可以显示网页服务器或者文件系统的HTML文件（标准通用标记语言的一个应用）内容，并让用户与这些文件交互的一种软件。</li>
+<li>浏览器内核（Rendering Engine）：负责对网页语法的解释（如标准通用标记语言下的一个应用HTML、JavaScript）并渲染（显示）网页。 所以，通常所谓的浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。</li>
+<li>IE：trident；  Safari：webkit；Firefox：gecko；chrome、Opera：blink</li>
+</ul>
+<h5 id="文件的后缀名"><a href="#文件的后缀名" class="headerlink" title="文件的后缀名"></a>文件的后缀名</h5><ul>
+<li>修改文件的后缀名是不会改变内容，只决定打开方式</li>
+<li>H系列标签作用：把页面上的文字加上标题的语义</li>
+</ul>
+<h5 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h5><ul>
+<li>http协议<ul>
+<li>请求报文</li>
+<li>响应报文</li>
+<li>URL：协议名、服务器的IP地址、端口号、请求文件的名称</li>
+</ul>
+</li>
+<li>浏览器接受用户操作——浏览器封装HTTP请求——链接服务器：DNS解析——发送请求Request——服务器接收请求——处理请求——返回响应报文——浏览器接收响应报文——渲染页面呈现</li>
+<li>如果没有设置端口号那么默认的端口是：80</li>
+</ul>
+<p>图片是另外请求</p>
+<p>继续渲染与请求服务器的图片</p>
+<h5 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签"></a>图片标签</h5><ul>
+<li>img：图片标签</li>
+<li>src：标签的属性，设置图片的路径</li>
+<li>Alt：如果图片不存在，设置图片的文本信息</li>
+<li>title：设置图片的提示信息，当鼠标悬停在图片上方的时候，就会显示提示信息</li>
+</ul>
+<h5 id="访问有图片的网页时，浏览器和服务器的交互过程"><a href="#访问有图片的网页时，浏览器和服务器的交互过程" class="headerlink" title="访问有图片的网页时，浏览器和服务器的交互过程"></a>访问有图片的网页时，浏览器和服务器的交互过程</h5><ul>
+<li>用户在地址栏中输入一个网页的网址，按回车</li>
+<li>浏览器就会向这个地址的服务器发送一个请求报文</li>
+<li>服务器根据请求报文返回网页的页面数据给浏览器</li>
+<li>浏览器解析返回的响应报文，并渲染显示</li>
+<li>当浏览器解析到图片的时候，它不知道图片是在哪里的，所以，浏览器会再发送一次请求报文，去请求服务器的那一张图片</li>
+<li>然后等待服务器返回图片的响应的时候，浏览器还会继续解析下面的其它内容</li>
+</ul>
+<h5 id="路径分为两种情况"><a href="#路径分为两种情况" class="headerlink" title="路径分为两种情况"></a>路径分为两种情况</h5><ul>
+<li>绝对路径：从盘符开始寻找路径</li>
+<li>相对路径：从当前页面开始寻找路径</li>
+</ul>
+<h5 id="a标签使用的地方"><a href="#a标签使用的地方" class="headerlink" title="a标签使用的地方"></a>a标签使用的地方</h5><ul>
+<li>空连接：<code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code></li>
+<li>去到其它的网页：<code>&lt;a href=&quot;其它的网页.html&quot;&gt;</code></li>
+<li>去到其它页面的某一个地方，在跳转的页面进行定位 <code>&lt;a href=&quot;其它的网页.html#id&quot;&gt;</code></li>
+<li>去到本页面的某一个地方：<code>&lt;a href=&quot;#id&quot;&gt;</code></li>
+<li>下载（不建议）</li>
+</ul>
+<h5 id="a标签的属性target"><a href="#a标签的属性target" class="headerlink" title="a标签的属性target"></a>a标签的属性target</h5><ul>
+<li><code>&lt;a href=&quot;1.html&quot; target=&quot;_blank&quot;&gt;将会用新的页面打开1.html&lt;/a&gt;</code></li>
+<li><code>&lt;a href=&quot;1.html&quot; target=&quot;_self&quot;&gt;将会在当前的页面打开1.html&lt;/a&gt;</code></li>
+<li>base 为页面上所有a标签设置跳转的方式（base标签一般放在title下面，写在head里面）<code>&lt;base target=&quot;_blank&quot;&gt;</code></li>
+</ul>
+<h5 id="DOCTYPE文档类型"><a href="#DOCTYPE文档类型" class="headerlink" title="DOCTYPE文档类型"></a>DOCTYPE文档类型</h5><ul>
+<li>DTD 文档类型定义</li>
+<li>html和XHTML规范<ul>
+<li>html：3种<ul>
+<li>strict</li>
+<li>transitional（用的最多）</li>
+<li>frameset</li>
+</ul>
+</li>
+<li>XHTML：3种</li>
+</ul>
+</li>
+<li>lang 用来设置当前页面的语言<ul>
+<li>设置页面上主要使用语言的类型</li>
+<li>将来做SEO的时候在权重上起到一定的作用</li>
+<li>用于特殊设备上的设置，eg，盲人设备</li>
+</ul>
+</li>
+</ul>
+<h5 id="关于SEO"><a href="#关于SEO" class="headerlink" title="关于SEO"></a>关于SEO</h5><ul>
+<li>搜索引擎优化（网站在搜索页面上的排名靠前）<ul>
+<li>买排名，不靠谱</li>
+<li>将页面做成静态页面（html）</li>
+<li>发外链</li>
+<li>页面的友好性（规范）：在合适的地方使用合适的标签，合理的使用标签的语义化</li>
+</ul>
+</li>
+<li>讨好搜索引擎<ul>
+<li>网络爬虫，搜索引擎机器人：收录Internet上的网站，找到访问量高的，语义化好的网站，最后将这些网站作为搜索的结果呈现给用户观看  任务：就是用来访问页面给页面排序，从而在用户搜索的时候可以有一个先后的排名</li>
+</ul>
+</li>
+<li><p>让网站更靠前的方式：</p>
+<ul>
+<li>买排名，不靠谱</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+<h5 id="title标签"><a href="#title标签" class="headerlink" title="title标签"></a>title标签</h5><ul>
+<li>作用：让页面拥有一个属于自己的标题</li>
+<li>title中的文本在SEO中占有很大的权重</li>
+<li>h1,h2</li>
+</ul>
+<h5 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h5><ul>
+<li>注意：meta中设置的所有的内容在页面都不会显示，</li>
+</ul>
+<ul>
+<li><p>description 可以描述页面，可以用来使用百度程序（网络爬虫）来收录关键信息，以此提高页面的排名</p>
+</li>
+<li><p>keywords  关键词，可以用来提高页面的关键词的比重的一种方式，:angry:英文的逗号</p>
+</li>
+<li><p>最多不要超过十个</p>
+</li>
+<li><p>charset</p>
+<ul>
+<li><p>字符集：相当于一个字库，在这个字库有很多的文字，每一个文字都有对应的编码</p>
+</li>
+<li><p>当你设置的网页的编码格式和保存的编码格式不一样的时候，就会发生乱码</p>
+</li>
+<li><p>gb2312：国际标准，收录了汉字，片假名</p>
+</li>
+<li><p>gbk：国标扩（扩展版），一个文字2个字节</p>
+</li>
+<li><p>UTF-8：收录全世界所有的语言中的文字，一个文字3个字节</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h5><ul>
+<li>无序列表<ul>
+<li>ul标签的作用：表示在这里有一个无序的列表</li>
+<li>li标签的作用：表示列表的项</li>
+<li>注意：ul不能单独出现，ul里面一定要放li，li是一个容器，放什么其他的标签都可以</li>
+</ul>
+</li>
+<li>有序列表<ul>
+<li>作用：显示一段有顺序的数据</li>
+<li>语义：一组有顺序的数据</li>
+</ul>
+</li>
+<li>自定义列表：dl,dt,dd<ul>
+<li>dl标签：写一个自定义列表</li>
+<li>dt标签：它代表的就是这儿有一个自定义的列表项</li>
+<li>dd标签：代表dt对应的列表项中的具体内容</li>
+</ul>
+</li>
+</ul>
+<h5 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h5><ul>
+<li><p>table标签：表示是一个表格的内容</p>
+</li>
+<li><p>tr标签：表示是表格中的一行</p>
+</li>
+<li><p>td标签：表示是表格中的一个单元格</p>
+</li>
+<li><p>表格的其它标签和属性：</p>
+<ul>
+<li>表格的属性：<table border="1" cellspacing="" cellpadding=""> <ul>
+<li>border：设置表格的边框的宽度 </li>
+<li>cellspacing：设置的是表格中的单元格之间的距离</li>
+<li>cellpadding：设置的是单元格中的内容与单元格之间的距离</li>
+<li>width</li>
+<li>height</li>
+</ul>
+</table></li>
+</ul>
+</li>
+<li><p>表格中的其他标签</p>
+<ul>
+<li>th标签：设置表头，具体表现的效果是文字加粗，居中</li>
+<li>caption标签：设置标题的标题，注意，caption标签应该放在table标签后面</li>
+<li>thead标签：设置的是表格的头部信息，一般th的内容都应该放在这里</li>
+<li>tbody标签：设置的是表格的主题内容，一般td的内容都放在这里</li>
+<li>tfoot标签：设置的是表格的尾部信息，一般是放一些总结性的信息</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+<h5 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h5><ul>
+<li><code>&lt;input type=&quot;hidden&quot; value=&quot;&quot;&gt;</code> 学习ajax时候用到</li>
+<li><input type="text" value="默认值">：输入框</li>
+<li><input type="password">：密码框</li>
+<li><input type="hidden" value="隐藏的数据">：隐藏域</li>
+<li><input type="radio">：输入框</li>
+<li>注意：如果单选按钮要真正做到单选的效果，需要进行分组。通过name属性，可以将多个单选按钮设置为一组</li>
+<li>默认选中 checked=”checked”</li>
+<li><input type="checkbox" checked="checked" name="hobby">：复选框</li>
+<li><input type="button" value="按钮上的文字">：设置一个普通按钮</li>
+<li><input type="image" value="图像的路径">：设置一个图像按钮（图像域），按钮的图片需要通过src来进行设置</li>
+<li><input type="submit">：提交按钮</li>
+<li><input type="reset">：重置按钮</li>
+<li>注意：不管是提交还是重置，都要先有一个表单<form></form></li>
+<li>下拉框</li>
+<li>文本域</li>
+</ul>
+<p>注意：1. reset如果不设置value值，会有默认值<br>        2.reset、submit等需要和form标签配合使用，否则不会有效果</p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>

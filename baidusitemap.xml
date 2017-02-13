@@ -2,27 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
-    
-    
   <url>
-    <loc>http://yoursite.com/2017/02/12/HTML5%EF%BC%881%EF%BC%89/</loc>
-    <lastmod>2017-02-12T02:27:30.750Z</lastmod>
+    <loc>https://github.com/Mango-mao/Mango-mao.github.io/2015/02/12/HTML5%EF%BC%882%EF%BC%89/</loc>
+    <lastmod>2017-02-12T07:21:58.824Z</lastmod>
     <data>
         <display>
-        <title>html5</title>
-        <pubTime>2017-02-12T02:22:55.000Z</pubTime>
+        <title>HTML5（2）</title>
+        <pubTime>2015-02-12T07:02:25.000Z</pubTime>
         
-        <tag>html </tag>
+        <tag>Web </tag>
          
-        <tag>learning </tag>
+        <tag>HTML5 </tag>
          
          
            
              
-              <breadCrumb title="学习笔记" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+              <breadCrumb title="前端" url="https://github.com/Mango-mao/Mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
              
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/"/>
+              <breadCrumb title="HTML5" url="https://github.com/Mango-mao/Mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/HTML5/"/>
           
         </display>
     </data>
@@ -30,17 +28,54 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/02/12/hello-world/</loc>
-    <lastmod>2017-02-12T02:19:11.277Z</lastmod>
+    <loc>https://github.com/Mango-mao/Mango-mao.github.io/2017/02/12/jQuery/</loc>
+    <lastmod>2017-02-12T07:20:13.774Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2017-02-12T02:19:11.220Z</pubTime>
+        <title>jQuery</title>
+        <pubTime>2017-02-12T07:16:13.000Z</pubTime>
         
+        <tag>Web </tag>
+         
+        <tag>jQuery </tag>
+         
          
            
+             
+              <breadCrumb title="前端" url="https://github.com/Mango-mao/Mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+             
+              <breadCrumb title="jQuery" url="https://github.com/Mango-mao/Mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/jQuery/"/>
+          
         </display>
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://github.com/Mango-mao/Mango-mao.github.io/2015/01/12/HTML5%EF%BC%881%EF%BC%89/</loc>
+    <lastmod>2017-02-12T07:18:59.550Z</lastmod>
+    <data>
+        <display>
+        <title>HTML5（1）</title>
+        <pubTime>2015-01-12T02:22:55.000Z</pubTime>
+        
+        <tag>学习 </tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://github.com/Mango-mao/Mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+             
+              <breadCrumb title="HTML5" url="https://github.com/Mango-mao/Mango-mao.github.io/categories/%E5%89%8D%E7%AB%AF/HTML5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
 </urlset>
