@@ -14,7 +14,8 @@
 <li>函数调用模式</li>
 <li>方法模式</li>
 <li>构造器模式</li>
-<li>上下文模式</li>
+<li>上下文模式<a id="more"></a>
+</li>
 </ul>
 </li>
 <li><p>函数的定义方式</p>
@@ -265,7 +266,7 @@ return {
 <li>闭包的概念<ul>
 <li>闭包就是封闭，包裹的意思，在js中就是指函数</li>
 <li>函数内的空间就是一个封闭的包裹的范围</li>
-<li>因此闭包就是函数所构成的一个外部无法直接访问的区域</li>
+<li>因此闭包就是函数所构成的一个外部无法直接访问的区域<a id="more"></a></li>
 </ul>
 </li>
 <li>在js中，什么是闭包<ul>
@@ -432,7 +433,8 @@ console.log(func)//123
 console.log(typeof func)
 //获得对象的类型
 console.log(Object.prototype.toString.call(func))
-</code></pre><blockquote>
+</code></pre><a id="more"></a>
+<blockquote>
 <ul>
 <li><p>当函数声明与变量声明冲突的时候，只看谁先有数据<br>函数的声明比变量的声明意义多一层，声明变量，是告诉解释器当前环境可以使用该名字，而声明函数，是告诉解释器，除了可以使用该名字，该名字还表示一个函数体</p>
 <ul>
@@ -562,7 +564,7 @@ foo2();//error:foo2 is not function 已定义，但是函数未被指向
     <entry>
       <title><![CDATA[面向对象（2）]]></title>
       <url>https://mango-mao.github.io/mangomao/2016/04/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%882%EF%BC%89/</url>
-      <content type="html"><![CDATA[<h4 id="一、复习"><a href="#一、复习" class="headerlink" title="一、复习"></a>一、复习</h4><blockquote>
+      <content type="html"><![CDATA[<h4 id="一、小总结"><a href="#一、小总结" class="headerlink" title="一、小总结"></a>一、小总结</h4><blockquote>
 <ol>
 <li>混入——可以将一个对象的成员 混入 到另一个对象当中</li>
 <li>混合式继承<ul>
@@ -575,7 +577,7 @@ foo2();//error:foo2 is not function 已定义，但是函数未被指向
 <li>原型链结构：<ul>
 <li>实例对象–》构造函数.原型–》Object.prototype–》null</li>
 <li>内置对象–》内置对象构造函数.原型–》Object.prototype–》null</li>
-<li>Object对象–》Object.prototype–》null</li>
+<li>Object对象–》Object.prototype–》null<a id="more"></a></li>
 </ul>
 </li>
 <li>动态函数：Function<ul>
@@ -794,7 +796,8 @@ console.log(a); //123;
 <ul>
 <li>使用js原生自带的一个对象，原型对象。</li>
 <li>每一个函数，在创建的时候，就自带 了一个prototype属性，通过prototype就可以访问原型对象</li>
-<li>在对象创建的时候，对象会默认创建一个原型对象，当执行对象方法的时候，对象没有这个东西，就会去在原型上找</li>
+<li>在对象创建的时候，对象会默认创建一个原型对象，当执行对象方法的时候，对象没有这个东西，就会去在原型上找<a id="more"></a>
+</li>
 </ul>
 </li>
 <li><p>什么东西应该被加载原型上面，什么东西应该被放在对象中</p>
