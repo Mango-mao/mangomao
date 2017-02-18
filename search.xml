@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[【转】模块化演变历程]]></title>
+      <title><![CDATA[模块化演变历程]]></title>
       <url>https://mango-mao.github.io/mangomao/2016/11/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%BC%94%E5%8F%98%E5%8E%86%E5%8F%B2/</url>
       <content type="html"><![CDATA[<p>模块系统主要解决模块的定义、依赖和导出，先来看看已经存在的模块系统。</p>
 <h1 id="script标签"><a href="#script标签" class="headerlink" title="script标签"></a>script标签</h1><pre><code>&lt;script src=&quot;module1.js&quot;&gt;&lt;/script&gt;
