@@ -288,6 +288,1072 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/11/03/模块化演变历史/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/mangomao/2016/11/03/模块化演变历史/" itemprop="url">
+                  【转】模块化演变历程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-03T23:09:57+08:00">
+                2016-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/模块化/" itemprop="url" rel="index">
+                    <span itemprop="name">模块化</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mangomao/2016/11/03/模块化演变历史/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/03/模块化演变历史/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>模块系统主要解决模块的定义、依赖和导出，先来看看已经存在的模块系统。</p>
+<h1 id="script标签"><a href="#script标签" class="headerlink" title="script标签"></a>script标签</h1><pre><code>&lt;script src=&quot;module1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;module2.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;libraryA.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;module3.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>这是最原始的 JavaScript 文件加载方式，如果把每一个文件看做是一个模块，那么他们的接<br>口通常是暴露在全局作用域下，也就是定义在 window 对象中，不同模块的接口调用都是一<br>个作用域中，一些复杂的框架，会使用命名空间的概念来组织这些模块的接口，典型的例子<br>如 YUI 库。<br>这种原始的加载方式暴露了一些显而易见的弊端：</p>
+<ul>
+<li>全局作用域下容易造成变量冲突</li>
+<li>文件只能按照 <code>&lt;script&gt;</code> 的书写顺序进行加载</li>
+<li>开发人员必须主观解决模块和代码库的依赖关系</li>
+<li>在大型项目中各种资源难以管理，长期积累的问题导致代码库混乱不堪</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/mangomao/2016/11/03/模块化演变历史/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/10/18/webpack使用引导/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/mangomao/2016/10/18/webpack使用引导/" itemprop="url">
+                  webpack使用引导
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-18T20:26:33+08:00">
+                2016-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/webpack/" itemprop="url" rel="index">
+                    <span itemprop="name">webpack</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mangomao/2016/10/18/webpack使用引导/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/18/webpack使用引导/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="webpack使用引导"><a href="#webpack使用引导" class="headerlink" title="webpack使用引导"></a>webpack使用引导</h1><p>因为官网提供的各种配置和启动方法有原生的cli也有配置文件的方式，我们之后的讲解都建立在市面主流使用方法的基础上进行讲解</p>
+<h2 id="安装webpack与运行介绍"><a href="#安装webpack与运行介绍" class="headerlink" title="安装webpack与运行介绍"></a>安装webpack与运行介绍</h2><h2 id="创建目录结构"><a href="#创建目录结构" class="headerlink" title="创建目录结构"></a>创建目录结构</h2><p>Deploy是编译之后的可用于打包的文件，src中的是开发文件</p>
+<img src="/mangomao/uploads/webpack/2.png">
+<img src="/mangomao/uploads/webpack/3.png">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/mangomao/2016/10/18/webpack使用引导/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/10/16/webpack简介/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/mangomao/2016/10/16/webpack简介/" itemprop="url">
+                  webpack简介
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-16T12:26:33+08:00">
+                2016-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/webpack/" itemprop="url" rel="index">
+                    <span itemprop="name">webpack</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mangomao/2016/10/16/webpack简介/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/16/webpack简介/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="webpack是什么？"><a href="#webpack是什么？" class="headerlink" title="webpack是什么？"></a>webpack是什么？</h1><p>CommonJS和AMD是用于JavaScript模块管理的两大规范，前者定义的是模块的同步加载，主要用于NodeJS；而后者则是异步加载，通过requirejs等工具适用于前端。随着npm成为主流的JavaScript组件发布平台，越来越多的前端项目也依赖于npm上的项目，或者 自身就会发布到npm平台。因此，让前端项目更方便的使用npm上的资源成为一大需求。<br>web开发中常用到的静态资源主要有JavaScript、CSS、图片、Jade等文件，webpack中将静态资源文件称之为模块。 webpack是一个module bundler(模块打包工具)，其可以兼容多种js书写规范，且可以处理模块间的依赖关系，具有更强大的js模块化的功能。Webpack对它们进行统 一的管理以及打包发布，其官方主页用下面这张图来说明Webpack的作用</p>
+<img src="/mangomao/uploads/webpack/1.png">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/mangomao/2016/10/16/webpack简介/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/05/20/什么是响应式开发/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/mangomao/2016/05/20/什么是响应式开发/" itemprop="url">
+                  什么是响应式开发
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-20T08:25:42+08:00">
+                2016-05-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/移动端/Bootstrap/" itemprop="url" rel="index">
+                    <span itemprop="name">Bootstrap</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mangomao/2016/05/20/什么是响应式开发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/20/什么是响应式开发/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="什么是响应式开发"><a href="#什么是响应式开发" class="headerlink" title="什么是响应式开发"></a>什么是响应式开发</h1><p>在移动互联日益成熟的时候，我们在桌面浏览器上开发的网页已经无法满足移动设备的阅读。<br>通常的做法是针对移动端单独做一套特定的版本。<br>但是如果终端越来越多那么你需要开发的版本就会越来越多（大屏移动设备普及）。<br>那么Ethan Marcotte在2010年5月份提出的一个概念，简而言之，就是一个网站能够兼容多个终端。 </p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/mangomao/2016/05/20/什么是响应式开发/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/05/19/写移动项目遇到的问题（2）/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/mangomao/2016/05/19/写移动项目遇到的问题（2）/" itemprop="url">
+                  写移动项目时遇到的问题(二)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-19T22:45:02+08:00">
+                2016-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mangomao/2016/05/19/写移动项目遇到的问题（2）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/写移动项目遇到的问题（2）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="使用过渡和改变注意问题"><a href="#使用过渡和改变注意问题" class="headerlink" title="使用过渡和改变注意问题"></a>使用过渡和改变注意问题</h1><p>在移动端为了兼容老版本的一些webkit浏览时在css中或者js中一定要做兼容处理。<br>Css中的处理方法是加上-webkit-前缀和一个不加的。<br>Js中处理方法是style设置的时候需要设置一个webkit前缀的属性和一个不加的。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/mangomao/2016/05/19/写移动项目遇到的问题（2）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/05/18/移动端事件/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/mangomao/2016/05/18/移动端事件/" itemprop="url">
+                  二、移动端事件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-18T12:05:09+08:00">
+                2016-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mangomao/2016/05/18/移动端事件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/18/移动端事件/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Touch事件"><a href="#Touch事件" class="headerlink" title="Touch事件"></a>Touch事件</h1><h2 id="ouchstart：当手指触碰屏幕时候触发。"><a href="#ouchstart：当手指触碰屏幕时候触发。" class="headerlink" title="ouchstart：当手指触碰屏幕时候触发。"></a>ouchstart：当手指触碰屏幕时候触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;touchstart&apos;,function(e){});
+</code></pre><p>事件返回的e对象包含那些移动端特有的属性：<br>targetTouches 目标元素的所有当前触摸<br>changedTouches 页面上最新更改的所有触摸<br>touches 页面上的所有触摸</p>
+<h2 id="touchmove：当手指在屏幕上滑动时连续触发。"><a href="#touchmove：当手指在屏幕上滑动时连续触发。" class="headerlink" title="touchmove：当手指在屏幕上滑动时连续触发。"></a>touchmove：当手指在屏幕上滑动时连续触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;touchmove&apos;,function(e){});
+</code></pre><p>事件返回的e对象包含那些移动端特有的属性：<br>originalEvent  是jquery 封装的事件。<br>targetTouches 目标元素的所有当前触摸<br>changedTouches 页面上最新更改的所有触摸<br>touches 页面上的所有触摸</p>
+<h2 id="touchend：当手指离开屏幕时触发。"><a href="#touchend：当手指离开屏幕时触发。" class="headerlink" title="touchend：当手指离开屏幕时触发。"></a>touchend：当手指离开屏幕时触发。</h2><p>绑定事件的方法：<br>    dom.addEventListener(‘touchend’,function(e){});</p>
+<p>事件返回的e对象包含那些移动端特有的属性：<br>changedTouches 页面上最新更改的所有触摸 </p>
+<h2 id="touchcancel-系统停止跟踪触摸时候会触发。"><a href="#touchcancel-系统停止跟踪触摸时候会触发。" class="headerlink" title="touchcancel:系统停止跟踪触摸时候会触发。"></a>touchcancel:系统停止跟踪触摸时候会触发。</h2><p>这个事件不会经常使用，了解即可。</p>
+<h2 id="注意：在touchend事件的时候event只会记录changedtouches"><a href="#注意：在touchend事件的时候event只会记录changedtouches" class="headerlink" title="注意：在touchend事件的时候event只会记录changedtouches"></a>注意：在touchend事件的时候event只会记录changedtouches</h2><p>clientX:触摸目标在视口中的X坐标。<br>clientY:触摸目标在视口中的Y坐标。<br>pageX：触摸目标在页面中的x坐标。<br>pageY：触摸目标在页面中的y坐标。<br>screenX:触摸目标在屏幕中的x坐标。<br>screenY:触摸目标在屏幕中的y坐标。</p>
+<h1 id="移动端的滑动效果"><a href="#移动端的滑动效果" class="headerlink" title="移动端的滑动效果"></a>移动端的滑动效果</h1><p>在移动端特有的事件touch中，<br>包含了  touchstart，touchmove，touchend三个事件，<br>首先：<br>我们可以通过touchstart事件中返回的event对象中的第一个触摸点信息中的client坐标，<br>然后：<br>我们再通过监听touchmove事件的时候获取到滑动的时候的触摸点，再获取event对象中返回的client坐标，这样就可以计算滑动的时候改变的距离。<br>同时改变当前元素的translate就可以。<br>最后：<br>在touchend的时候利用记录下当前元素的定位。</p>
+<blockquote>
+<p>注意的是：在移动端是利用transform来做定位。<br>滑动的时候改变距离的方向问题。</p>
+</blockquote>
+<h1 id="过渡和动画结束事件"><a href="#过渡和动画结束事件" class="headerlink" title="过渡和动画结束事件"></a>过渡和动画结束事件</h1><h2 id="transitionEnd-过渡结束后触发。"><a href="#transitionEnd-过渡结束后触发。" class="headerlink" title="transitionEnd:过渡结束后触发。"></a>transitionEnd:过渡结束后触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;webkitTransitionEnd&apos;,function(e){ });
+dom.addEventListener(&apos;transitionEnd&apos;,function(e){ });
+</code></pre><p>在这里要注意的是：为了兼容浏览器在绑定事件的时候需要同时绑定一个带webkit前缀的事件和不带的这样达到兼容主流浏览器。<br>还有：给目标元素绑定事件后，<strong>每一次过渡结束都会触发transitionEnd事件</strong>。</p>
+<h2 id="animationEnd-动画结束后触发。"><a href="#animationEnd-动画结束后触发。" class="headerlink" title="animationEnd:动画结束后触发。"></a>animationEnd:动画结束后触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;webkitAnimationEnd&apos;,function(e){ });
+dom.addEventListener(&apos;animationEnd&apos;,function(e){ });
+</code></pre><h1 id="Gesture-事件（不常用）"><a href="#Gesture-事件（不常用）" class="headerlink" title="Gesture 事件（不常用）"></a>Gesture 事件（不常用）</h1><h2 id="gesturestart"><a href="#gesturestart" class="headerlink" title="gesturestart"></a>gesturestart</h2><p>当一个手指触摸屏幕之后，第二个手指再触摸屏幕时触发。</p>
+<h2 id="gesturechange"><a href="#gesturechange" class="headerlink" title="gesturechange"></a>gesturechange</h2><p>当上面的事件触发后立即触发。</p>
+<h2 id="gestureend"><a href="#gestureend" class="headerlink" title="gestureend"></a>gestureend</h2><p>第二根手指离开屏幕时触发，之后将不会再次触发gesturechange。</p>
+<p>在event当中会返回另外两个参数<br>scale 根据两个手指的滑动距离计算的缩放比例 初始1<br>rotation根据两个手指的滑动距离计算的旋转角度 初始 0</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/04/20/面向对象（5）/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1001,1095 +2067,13 @@ console.log(Object.prototype.toString.call(func))
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/04/16/面向对象（1）/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Clementine">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Clementine">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/mangomao/2016/04/16/面向对象（1）/" itemprop="url">
-                  面向对象（1）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-16T12:53:37+08:00">
-                2016-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/mangomao/2016/04/16/面向对象（1）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/16/面向对象（1）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ol>
-<li><p>解决方案：</p>
-<ul>
-<li>使用js原生自带的一个对象，原型对象。</li>
-<li>每一个函数，在创建的时候，就自带 了一个prototype属性，通过prototype就可以访问原型对象</li>
-<li>在对象创建的时候，对象会默认创建一个原型对象，当执行对象方法的时候，对象没有这个东西，就会去在原型上找
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/mangomao/2016/04/16/面向对象（1）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/02/12/jQuery/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Clementine">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Clementine">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/mangomao/2016/02/12/jQuery/" itemprop="url">
-                  jQuery
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-12T15:16:13+08:00">
-                2016-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/jQuery/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/mangomao/2016/02/12/jQuery/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/12/jQuery/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>今天看到这样一句jquery源码<br><code>(function (window, undefined){})(window)</code></p>
-</blockquote>
-<ul>
-<li>第一眼：这是啥？</li>
-<li>第二眼：这是干啥？</li>
-<li>第三眼：为啥？</li>
-<li><p>然后……</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/mangomao/2016/02/12/jQuery/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2015/02/12/HTML5（2）/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Clementine">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Clementine">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/mangomao/2015/02/12/HTML5（2）/" itemprop="url">
-                  HTML5（2）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-02-12T15:02:25+08:00">
-                2015-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/HTML5/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML5</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/mangomao/2015/02/12/HTML5（2）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/12/HTML5（2）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="基础API提升"><a href="#基础API提升" class="headerlink" title="基础API提升"></a>基础API提升</h4><ul>
-<li>document.getElement……appendChild……都属于基础API</li>
-<li>alt +右键往下滑</li>
-<li><p>新选择器</p>
-<ul>
-<li><code>document.querySelector(selector)</code>——返回第一个满足选择器条件的元素，返回一个dom对象<ul>
-<li>代码段 qs=querySelector</li>
-<li>ae=addEventListenter</li>
-</ul>
-</li>
-<li><code>docuemnt.querySelectorAll(&quot;.item&quot;)</code>——返回所有满足该条件的元素，返回元素类型为dom对象的数组</li>
-<li>$（”.item”）——返回一个jQuery对象（dom元素的数组）</li>
-<li>本质上jQuery的方式和querySelector的方式都是获取DOM数组，只不过jQuery会多一些其它成员</li>
-<li>DOM数组的每一个成员注册事件不能像jQuery一样直接注册，必须分别给每个元素添加</li>
-<li>h5就是将我们经常需要的操作又包装一层，原生API</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/mangomao/2015/02/12/HTML5（2）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2015/01/12/HTML5（1）/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Clementine">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Clementine">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/mangomao/2015/01/12/HTML5（1）/" itemprop="url">
-                  HTML5（1）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-01-12T10:22:55+08:00">
-                2015-01-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/HTML5/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML5</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/mangomao/2015/01/12/HTML5（1）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/12/HTML5（1）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h5 id="浏览器与服务器之间的交互过程"><a href="#浏览器与服务器之间的交互过程" class="headerlink" title="浏览器与服务器之间的交互过程"></a>浏览器与服务器之间的交互过程</h5><ol>
-<li><p>用户在浏览器的地址栏中输入网站的地址</p>
-</li>
-<li><p>浏览器将请求报文发送给地址栏中网站的服务器</p>
-</li>
-<li><p>服务器根据请求报文返回页面数据给浏览器</p>
-</li>
-<li><p>浏览器得到响应的数据以后将之呈现给用户</p>
-</li>
-</ol>
-<h5 id="请求报文和响应报文——审查元素-》network"><a href="#请求报文和响应报文——审查元素-》network" class="headerlink" title="请求报文和响应报文——审查元素 》network"></a>请求报文和响应报文——审查元素 》network</h5><ol>
-<li><p>请求报文：浏览器发送给服务器的</p>
-</li>
-<li><p>响应报文：服务器返回给浏览器的</p>
-</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/mangomao/2015/01/12/HTML5（1）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2014/12/14/HTML基础知识（2）/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Clementine">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Clementine">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/mangomao/2014/12/14/HTML基础知识（2）/" itemprop="url">
-                  HTML基础知识（2）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-12-14T20:46:12+08:00">
-                2014-12-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/mangomao/2014/12/14/HTML基础知识（2）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/14/HTML基础知识（2）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="html中的空格合并"><a href="#html中的空格合并" class="headerlink" title="html中的空格合并"></a>html中的空格合并</h4><ul>
-<li>空格合并：在html源代码里面写的空格，换行，tab，浏览器解析的时候不敏感，再多的连续的空格，换行，tab浏览器只会解析成一个空格。</li>
-</ul>
-<ul>
-<li>如果想要多个空格，使用特殊字符——字符实体<ul>
-<li><code> </code>一个中文字符的位置</li>
-<li><code>&lt;</code> &lt;</li>
-<li><code>&gt;</code> &gt;</li>
-<li><code>&amp;</code> &amp;符号</li>
-<li><code>©</code> 版权</li>
-<li><code>®</code> 商标</li>
-</ul>
-</li>
-</ul>
-<p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/mangomao/2014/12/14/HTML基础知识（2）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2014/12/13/HMTL基础知识（1）/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Clementine">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Clementine">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/mangomao/2014/12/13/HMTL基础知识（1）/" itemprop="url">
-                  HTML&CSS基础知识（1）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2014-12-13T22:43:29+08:00">
-                2014-12-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/mangomao/categories/前端/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/mangomao/2014/12/13/HMTL基础知识（1）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/13/HMTL基础知识（1）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h5 id="浏览器与服务器之间的交互过程"><a href="#浏览器与服务器之间的交互过程" class="headerlink" title="浏览器与服务器之间的交互过程"></a>浏览器与服务器之间的交互过程</h5><ol>
-<li><p>用户在浏览器的地址栏中输入网站的地址</p>
-</li>
-<li><p>浏览器将请求报文发送给地址栏中网站的服务器</p>
-</li>
-<li><p>服务器根据请求报文返回页面数据给浏览器</p>
-</li>
-<li><p>浏览器得到响应的数据以后将之呈现给用户</p>
-</li>
-</ol>
-<p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/mangomao/2014/12/13/HMTL基础知识（1）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/mangomao/page/2/">2</a><a class="extend next" rel="next" href="/mangomao/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
           
           </div>
@@ -2130,7 +2114,7 @@ console.log(Object.prototype.toString.call(func))
           
             <div class="site-state-item site-state-posts">
               <a href="/mangomao/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2139,7 +2123,7 @@ console.log(Object.prototype.toString.call(func))
           
             <div class="site-state-item site-state-categories">
               <a href="/mangomao/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2148,7 +2132,7 @@ console.log(Object.prototype.toString.call(func))
           
             <div class="site-state-item site-state-tags">
               <a href="/mangomao/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

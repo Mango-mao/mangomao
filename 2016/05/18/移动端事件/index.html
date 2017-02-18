@@ -1,0 +1,985 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/mangomao/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/mangomao/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/mangomao/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习,Web,前端," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/mangomao/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Touch事件ouchstart：当手指触碰屏幕时候触发。绑定事件的方法：
+dom.addEventListener(&amp;apos;touchstart&amp;apos;,function(e){});
+事件返回的e对象包含那些移动端特有的属性：targetTouches 目标元素的所有当前触摸changedTouches 页面上最新更改的所有触摸touches 页面上的所有触摸
+touchmove：当手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二、移动端事件">
+<meta property="og:url" content="https://mango-mao.github.io/2016/05/18/移动端事件/index.html">
+<meta property="og:site_name" content="Clementine">
+<meta property="og:description" content="Touch事件ouchstart：当手指触碰屏幕时候触发。绑定事件的方法：
+dom.addEventListener(&amp;apos;touchstart&amp;apos;,function(e){});
+事件返回的e对象包含那些移动端特有的属性：targetTouches 目标元素的所有当前触摸changedTouches 页面上最新更改的所有触摸touches 页面上的所有触摸
+touchmove：当手">
+<meta property="og:updated_time" content="2017-02-18T13:38:45.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二、移动端事件">
+<meta name="twitter:description" content="Touch事件ouchstart：当手指触碰屏幕时候触发。绑定事件的方法：
+dom.addEventListener(&amp;apos;touchstart&amp;apos;,function(e){});
+事件返回的e对象包含那些移动端特有的属性：targetTouches 目标元素的所有当前触摸changedTouches 页面上最新更改的所有触摸touches 页面上的所有触摸
+touchmove：当手">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/mangomao/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'ROOT'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mango-mao.github.io/2016/05/18/移动端事件/"/>
+
+
+
+
+
+  <title> 二、移动端事件 | Clementine </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/mangomao/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Clementine</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/mangomao/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/mangomao/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/mangomao/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/mangomao/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/mangomao/About" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://mango-mao.github.io/mangomao/2016/05/18/移动端事件/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Clementine">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://ol5g8fjtw.bkt.clouddn.com/about.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Clementine">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Clementine" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                二、移动端事件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-18T12:05:09+08:00">
+                2016-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span id="busuanzi_container_page_pv">&nbsp;&nbsp;|&nbsp;&nbsp;阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+          
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mangomao/categories/前端/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mangomao/2016/05/18/移动端事件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/18/移动端事件/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Touch事件"><a href="#Touch事件" class="headerlink" title="Touch事件"></a>Touch事件</h1><h2 id="ouchstart：当手指触碰屏幕时候触发。"><a href="#ouchstart：当手指触碰屏幕时候触发。" class="headerlink" title="ouchstart：当手指触碰屏幕时候触发。"></a>ouchstart：当手指触碰屏幕时候触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;touchstart&apos;,function(e){});
+</code></pre><p>事件返回的e对象包含那些移动端特有的属性：<br>targetTouches 目标元素的所有当前触摸<br>changedTouches 页面上最新更改的所有触摸<br>touches 页面上的所有触摸</p>
+<h2 id="touchmove：当手指在屏幕上滑动时连续触发。"><a href="#touchmove：当手指在屏幕上滑动时连续触发。" class="headerlink" title="touchmove：当手指在屏幕上滑动时连续触发。"></a>touchmove：当手指在屏幕上滑动时连续触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;touchmove&apos;,function(e){});
+</code></pre><p>事件返回的e对象包含那些移动端特有的属性：<br>originalEvent  是jquery 封装的事件。<br>targetTouches 目标元素的所有当前触摸<br>changedTouches 页面上最新更改的所有触摸<br>touches 页面上的所有触摸</p>
+<h2 id="touchend：当手指离开屏幕时触发。"><a href="#touchend：当手指离开屏幕时触发。" class="headerlink" title="touchend：当手指离开屏幕时触发。"></a>touchend：当手指离开屏幕时触发。</h2><p>绑定事件的方法：<br>    dom.addEventListener(‘touchend’,function(e){});</p>
+<p>事件返回的e对象包含那些移动端特有的属性：<br>changedTouches 页面上最新更改的所有触摸 </p>
+<h2 id="touchcancel-系统停止跟踪触摸时候会触发。"><a href="#touchcancel-系统停止跟踪触摸时候会触发。" class="headerlink" title="touchcancel:系统停止跟踪触摸时候会触发。"></a>touchcancel:系统停止跟踪触摸时候会触发。</h2><p>这个事件不会经常使用，了解即可。</p>
+<h2 id="注意：在touchend事件的时候event只会记录changedtouches"><a href="#注意：在touchend事件的时候event只会记录changedtouches" class="headerlink" title="注意：在touchend事件的时候event只会记录changedtouches"></a>注意：在touchend事件的时候event只会记录changedtouches</h2><p>clientX:触摸目标在视口中的X坐标。<br>clientY:触摸目标在视口中的Y坐标。<br>pageX：触摸目标在页面中的x坐标。<br>pageY：触摸目标在页面中的y坐标。<br>screenX:触摸目标在屏幕中的x坐标。<br>screenY:触摸目标在屏幕中的y坐标。</p>
+<h1 id="移动端的滑动效果"><a href="#移动端的滑动效果" class="headerlink" title="移动端的滑动效果"></a>移动端的滑动效果</h1><p>在移动端特有的事件touch中，<br>包含了  touchstart，touchmove，touchend三个事件，<br>首先：<br>我们可以通过touchstart事件中返回的event对象中的第一个触摸点信息中的client坐标，<br>然后：<br>我们再通过监听touchmove事件的时候获取到滑动的时候的触摸点，再获取event对象中返回的client坐标，这样就可以计算滑动的时候改变的距离。<br>同时改变当前元素的translate就可以。<br>最后：<br>在touchend的时候利用记录下当前元素的定位。</p>
+<blockquote>
+<p>注意的是：在移动端是利用transform来做定位。<br>滑动的时候改变距离的方向问题。</p>
+</blockquote>
+<h1 id="过渡和动画结束事件"><a href="#过渡和动画结束事件" class="headerlink" title="过渡和动画结束事件"></a>过渡和动画结束事件</h1><h2 id="transitionEnd-过渡结束后触发。"><a href="#transitionEnd-过渡结束后触发。" class="headerlink" title="transitionEnd:过渡结束后触发。"></a>transitionEnd:过渡结束后触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;webkitTransitionEnd&apos;,function(e){ });
+dom.addEventListener(&apos;transitionEnd&apos;,function(e){ });
+</code></pre><p>在这里要注意的是：为了兼容浏览器在绑定事件的时候需要同时绑定一个带webkit前缀的事件和不带的这样达到兼容主流浏览器。<br>还有：给目标元素绑定事件后，<strong>每一次过渡结束都会触发transitionEnd事件</strong>。</p>
+<h2 id="animationEnd-动画结束后触发。"><a href="#animationEnd-动画结束后触发。" class="headerlink" title="animationEnd:动画结束后触发。"></a>animationEnd:动画结束后触发。</h2><p>绑定事件的方法：</p>
+<pre><code>dom.addEventListener(&apos;webkitAnimationEnd&apos;,function(e){ });
+dom.addEventListener(&apos;animationEnd&apos;,function(e){ });
+</code></pre><h1 id="Gesture-事件（不常用）"><a href="#Gesture-事件（不常用）" class="headerlink" title="Gesture 事件（不常用）"></a>Gesture 事件（不常用）</h1><h2 id="gesturestart"><a href="#gesturestart" class="headerlink" title="gesturestart"></a>gesturestart</h2><p>当一个手指触摸屏幕之后，第二个手指再触摸屏幕时触发。</p>
+<h2 id="gesturechange"><a href="#gesturechange" class="headerlink" title="gesturechange"></a>gesturechange</h2><p>当上面的事件触发后立即触发。</p>
+<h2 id="gestureend"><a href="#gestureend" class="headerlink" title="gestureend"></a>gestureend</h2><p>第二根手指离开屏幕时触发，之后将不会再次触发gesturechange。</p>
+<p>在event当中会返回另外两个参数<br>scale 根据两个手指的滑动距离计算的缩放比例 初始1<br>rotation根据两个手指的滑动距离计算的旋转角度 初始 0</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/mangomao/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/mangomao/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/mangomao/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/mangomao/2016/04/20/面向对象（5）/" rel="next" title="面向对象（4）">
+                <i class="fa fa-chevron-left"></i> 面向对象（4）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/mangomao/2016/05/19/写移动项目遇到的问题（2）/" rel="prev" title="写移动项目时遇到的问题(二)">
+                写移动项目时遇到的问题(二) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/18/移动端事件/"
+           data-title="二、移动端事件" data-url="https://mango-mao.github.io/mangomao/2016/05/18/移动端事件/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ol5g8fjtw.bkt.clouddn.com/about.jpg"
+               alt="Clementine" />
+          <p class="site-author-name" itemprop="name">Clementine</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/mangomao/archives">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/mangomao/categories">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/mangomao/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Mango-mao" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.justcoding.cc" target="_blank" title="Site">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Site
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Touch事件"><span class="nav-number">1.</span> <span class="nav-text">Touch事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ouchstart：当手指触碰屏幕时候触发。"><span class="nav-number">1.1.</span> <span class="nav-text">ouchstart：当手指触碰屏幕时候触发。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touchmove：当手指在屏幕上滑动时连续触发。"><span class="nav-number">1.2.</span> <span class="nav-text">touchmove：当手指在屏幕上滑动时连续触发。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touchend：当手指离开屏幕时触发。"><span class="nav-number">1.3.</span> <span class="nav-text">touchend：当手指离开屏幕时触发。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touchcancel-系统停止跟踪触摸时候会触发。"><span class="nav-number">1.4.</span> <span class="nav-text">touchcancel:系统停止跟踪触摸时候会触发。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意：在touchend事件的时候event只会记录changedtouches"><span class="nav-number">1.5.</span> <span class="nav-text">注意：在touchend事件的时候event只会记录changedtouches</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端的滑动效果"><span class="nav-number">2.</span> <span class="nav-text">移动端的滑动效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#过渡和动画结束事件"><span class="nav-number">3.</span> <span class="nav-text">过渡和动画结束事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#transitionEnd-过渡结束后触发。"><span class="nav-number">3.1.</span> <span class="nav-text">transitionEnd:过渡结束后触发。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#animationEnd-动画结束后触发。"><span class="nav-number">3.2.</span> <span class="nav-text">animationEnd:动画结束后触发。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gesture-事件（不常用）"><span class="nav-number">4.</span> <span class="nav-text">Gesture 事件（不常用）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gesturestart"><span class="nav-number">4.1.</span> <span class="nav-text">gesturestart</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gesturechange"><span class="nav-number">4.2.</span> <span class="nav-text">gesturechange</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gestureend"><span class="nav-number">4.3.</span> <span class="nav-text">gestureend</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Clementine
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+  <span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+
+本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/mangomao/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/mangomao/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/mangomao/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/mangomao/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/mangomao/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/mangomao/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/mangomao/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/mangomao/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/mangomao/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/mangomao/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/mangomao/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/mangomao/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/mangomao/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"justcoding.duoshuo.com"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/mangomao/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/mangomao/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/mangomao/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
